@@ -20,15 +20,15 @@
 到这，我们可以理解出其实流和动态表是同一种东西，只是在不同角度看待问题而产生的不同概念罢了，所以二者其实是可以相互转换的，
 我们可以将流转换为动态表，也可以将动态表转换为流。下图显示了可以在流上处理关系查询的概念模型。
 
-![flink-stream-query-stream_iteblog.png](/houying910523/GooYuanLy-s-blog/blob/master/SQL_on_Streaming/flink-stream-query-stream_iteblog.png)
+![](flink-stream-query-stream_iteblog.png)
 
 那么我们如何在流上定义一个动态表？有两种模式：追加和更新。追加模式下，流中的每条新增记录都会插入到动态表中，不会对动态表中的历史数据做修改；
 
-![7ef09cc6c022334554d252e74601045e.png](tckfb17656.png)
+![](tckfb17656.png)
 
 而更新模式下，流中的每条记录都会根据其唯一的健值或新增，或对历史的数据做更新操作。
 
-![4413ade90e4803b6bcfd8b9e3192f4a1.png](nj5km1ns2w.png)
+![](nj5km1ns2w.png)
 
 ### 持续查询
 
